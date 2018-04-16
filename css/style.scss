@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import "reset.css";
+@import "../fonts/iconfont.css";
+@mixin wh($w:100%,$h:100%){
+	width:$w;
+	height:$h;
+}
+
+@mixin flex($dir:column){
+	display:flex;
+	flex-direction:$dir;
+}
+
+.wrap{
+	@include wh();
+	@include flex();
+}
+* {
+  margin: 0px;
+  padding: 0px; 
+  text-decoration: none;
+  box-sizing:border-box;
+ 
+}
+html{
+   font-size: 625%;
+}
+
+html,body,.wrap{
+  width:100%;
+  height:100%;
+  min-width:320px; 
+}
+
+
+header{
+	@include wh($w:100%,$h:0.45rem);
+	background: #c4483c;
+	@include flex(row);
+	text-align: center;
+	line-height: 0.45rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	p{
+	    width: 15%;
+	    font-size: 0.18rem;
+	    color: #fff;
+	}
+	p:nth-child(2){
+	    width: 70%;
+	    input{
+	        width: 100%;
+	        border-radius: 0.15rem;
+	        background: #fff;
+	        border: none;
+	        outline: none;
+	        height: 0.25rem;
+	        text-align: center;
+	    }
+	}
+} 
+.nav1{
+    width: 100%;
+    height: 0.45rem;
+    position: fixed;
+    top: 0.45rem;
+    left: 0;
+    background: #fff;
+    z-index: 10;
+    ul{
+        @include flex(row);
+        width: 100%;
+        height: 0.45rem;
+        text-align: center;
+        line-height: 0.45rem;
+        font-size: 0.16rem;
+        li{
+            width: 33.3%;
+            span{
+                padding-bottom:0.1rem;
+                border-bottom: 0.01rem solid #000000;//在这个理
+            }
+        }
+    }
+}
+.s2{
+    display: none; 
+    height: 100%;
+    line-height: 100%;
+    padding-top:0.9rem ;
+    padding-bottom: 0.45rem;
+}
+             
+.s1{
+	@include wh($w:100%,$h:auto);
+	overflow-y: scroll;
+	padding-top:0.9rem ;
+	padding-bottom: 0.45rem;
+	.swiper-container,.swiper-wrapper,.swiper-slide{
+	    width: 100%;
+	    img{
+	        width: 100%;
+	        height: 1.5rem;
+	    }
+	}
+	.nav2{
+	    width: 100%;
+	    height: 0.7rem;
+	    margin-bottom: 0.1rem;
+	    ul{
+	        @include wh($w:100%,$h:100%);
+	        @include flex(row);
+	        text-align: center;
+	        li{
+	            width: 25%;
+	            i{
+	                display: inline-block;
+	                height: 0.5rem;
+	                width: 0.5rem;
+	                border: 0.01rem solid #c3473a;
+	                border-radius: 50%;
+	                line-height: 0.5rem;
+	                font-size: 0.18rem;
+	                color: #c3473a;
+	            }
+	            p{
+	                height: 0.2rem;
+	                line-height: 0.2rem;
+	                font-size: 0.12rem;
+	            }
+	        }
+	    }
+	}
+	
+	.tuijian{
+	    width: 100%;
+	    height: 0.45rem;
+	    line-height: 0.45rem;
+	    font-size: 0.16rem;
+	    border-top: 0.01rem solid #ccc;
+	    span{
+	        padding-left: 0.1rem;
+	        border-left: 0.03rem solid #c3473a;
+	    }
+	}
+	.dg{
+	    width: 100%;
+	    ul{
+	        width: 100%;
+	        flex-wrap: wrap; 
+	         @include flex(row);
+	         li{
+	             width: 33.3%;
+	             dl{
+	                 width: 100%;
+	                 height: 100%;
+	                 text-align: center;
+	                 dd{
+	                     width: 100%;
+
+	                     img{
+	                         width: 100%;
+	                     }
+	                 }
+	                 dt{
+	                     width: 100%;
+	                     height: 0.4rem;
+	                     line-height: 0.4rem;
+	                 }
+	             }
+	         }
+	    }
+	    
+	}
+}
+
+footer{
+	@include wh($w:100%,$h:0.45rem);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background:#333332 ;
+	ul{
+	    width: 100%;
+	    height: 100%;   
+	    @include flex(row);
+	    text-align: center;
+	    li{
+	        width: 25%;
+	        color: #999;
+	        i{
+	            display: inline-block;
+	            width: 0.3rem;
+	            height: 0.3rem;
+	            line-height: 0.3rem;
+	            font-size: 0.16rem;
+	        }
+	        p{
+	            width: 100%;
+	            height: 0.15rem;
+	            line-height: 0.15rem;
+	        }
+	    }
+	}
+	
+	.xs{
+	   color: #fff;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
